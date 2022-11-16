@@ -1,0 +1,19 @@
+nav {
+    width: 100vw;
+    /* border: 1px solid red; */
+    justify-self: flex-start;
+    align-self: flex-start;
+    overflow-y: hidden;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+}
+
+#logo img {
+    width: 45px;
+    transform: rotate(45deg);
+    margin: 0 .5em;
+}
