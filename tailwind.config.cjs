@@ -5,7 +5,8 @@ module.exports = {
     colors: {
       softpurple: '#a185db',
       midpurple: '#8163cb',
-      darkpurple: '#7251b5'
+      darkpurple: '#7251b5',
+      softgray: '#dfeaf5'
     },
     extend: {},
   },
