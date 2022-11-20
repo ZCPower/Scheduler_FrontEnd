@@ -20,6 +20,8 @@ function ClientList() {
         fetchClients()
     }, [])
 
+    //FIND WAY TO END INFINITE RE-RENDERING
+
     const mappedClients = clients.map((x) => {
         return (
             <div draggable className='bg-softgray mb-1 p-2 min-w-full text-center' id='clientDropCard'>
@@ -27,7 +29,7 @@ function ClientList() {
             </div>
         )
     })
-    console.log(clients)
+    // console.log(clients)
 
 
 

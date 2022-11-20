@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // import TechDropdown from './TechDropdown'
-
+import { Link, Navigate } from 'react-router-dom';
 import '../Styles/Nav.css'
 
 function Nav() {
@@ -23,9 +23,10 @@ function Nav() {
         setClientOpen(false)
     }
 
+
     return (
         <nav className='p-1 pl-5 bg-softpurple flex w-full mb-5 justify-between items-center' id='navContainer'>
-            <div id='logo' className='flex items-center'><h1 className='text-4xl mx-2 '>RBT Scheduler</h1> <img className='w-12 h-12 rotate-45' src='https://img.icons8.com/stickers/512/autism.png'></img></div>
+            <Link to='/schedule'><div id='logo' className='flex items-center'><h1 className='text-4xl mx-2 '>RBT Scheduler</h1> <img className='w-12 h-12 rotate-45' src='https://img.icons8.com/stickers/512/autism.png'></img></div></Link>
             <div className='flex list-none  z-10' id='navLinks'>
 
                 <li onMouseLeave={handleTechDropLeave} className='text-xl z-10'>
@@ -35,8 +36,8 @@ function Nav() {
                     >Mangage Techs</button>
                     {techOpen ? (
                         <ul id='techMenu' className='absolute z-10'>
-                            <li><button className='w-full bg-midpurple hover:bg-darkpurple'>Add Techs</button></li>
-                            <li><button className='bg-midpurple hover:bg-darkpurple'>Edit/Remove Techs</button></li>
+                            <li> <Link to='/addTech'><button className='w-full bg-midpurple hover:bg-darkpurple'>Add Techs</button></Link></li>
+                            <li><Link to='/editTechs'><button className='bg-midpurple hover:bg-darkpurple'>Edit/Remove Techs</button></Link></li>
                         </ul>
                     ) : null}
                 </li>
@@ -45,7 +46,7 @@ function Nav() {
                 <li onMouseLeave={handleClientDropLeave} className='mr-5'><button className='bg-midpurple bg hover:bg-darkpurple' onClick={handleClientDropdown}>Manage Clients</button>
                     {clientOpen ? (
                         <ul className='absolute z-10'>
-                            <li><button className='w-full bg-midpurple hover:bg-darkpurple'>Add Client</button></li>
+                            <li><Link to='addPatient'><button className='w-full bg-midpurple hover:bg-darkpurple'>Add Client</button></Link></li>
                             <li><button className='bg-midpurple hover:bg-darkpurple'>Edit/Remove Client</button></li>
                         </ul>
                     ) : null}

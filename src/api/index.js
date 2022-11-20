@@ -63,3 +63,30 @@ export async function addTech(name, rbt, training, trainer, tricare) {
         console.log(error)
     }
 }
+
+export async function addPatient(name, needsRbt, tricare, trainOn, groupable) {
+    // console.log('IN THE API!!!')
+    console.log(name, needsRbt, tricare, trainOn, groupable)
+    const url = `${baseUrl}/patients`;
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                needsRBT: needsRbt,
+                tricare: tricare,
+                trainOn: trainOn,
+                groupable: groupable,
+                dayoff: false
+            })
+        })
+        const data = response.json();
+        console.log(data)
+        return data;
+    } catch (error) {
+        console.log(error)
+    }
+}

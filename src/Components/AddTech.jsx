@@ -46,7 +46,7 @@ function AddTech() {
 
 
     return (
-        <form onSubmit={handleSubmit} className='border-solid border-2 border-sky-500 w-1/2 h-96 flex flex-col items-center justify-center gap-y-2'>
+        <form onSubmit={handleSubmit} className='border-solid border-2 border-sky-500 w-1/2 h-96 flex flex-col items-center justify-center gap-y-2 justify-self-center self-center mt-10'>
             <h2 className='text-2xl font-bold'>Add Tech</h2>
             <input className='bg-smoke p-2 text-xl my-1' onChange={handleNameChange} required placeholder='Tech Name'></input>
             <div className='flex gap-x-4 my-2'>

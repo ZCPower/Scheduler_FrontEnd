@@ -17,9 +17,11 @@ function TechList() {
             }
         }
         fetchTechs()
-    }, [techs])
+    }, [])
 
-    console.log('techs', techs)
+    //FIGURE OUT A WAY TO MAKE IT CHECK FOR UPDATES BUT NOT CONTINUOUSLY RE-RENDER
+
+    // console.log('techs', techs)
 
     // convert this to a table
     const mappedTechs = techs.map((x, key) => {
