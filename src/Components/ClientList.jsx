@@ -22,7 +22,7 @@ function ClientList() {
 
     const mappedClients = clients.map((x) => {
         return (
-            <div className='bg-softgray mb-1 p-2 min-w-full text-center' id='clientDropCard'>
+            <div draggable className='bg-softgray mb-1 p-2 min-w-full text-center' id='clientDropCard'>
                 <h3>{x.name}</h3>
             </div>
         )
@@ -32,7 +32,7 @@ function ClientList() {
 
 
     return (
-        <div className='self-end px-5 pt-2 mr-10 mt-2' id='clientDropDownList'><h2 className='text-xl font-bold underline'>Client List</h2>
+        <div className='self-end px-5 pt-2 mr-10 mt-2 text-center' id='clientDropDownList'><h2 className='text-xl font-bold underline'>Client List</h2>
             <div className='flex flex-col justify-center items-center'>{mappedClients}</div>
 
         </div>

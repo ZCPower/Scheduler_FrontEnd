@@ -24,7 +24,7 @@ function Nav() {
     }
 
     return (
-        <nav className='p-1 pl-5 bg-softpurple flex w-full justify-between items-center' id='navContainer'>
+        <nav className='p-1 pl-5 bg-softpurple flex w-full mb-5 justify-between items-center' id='navContainer'>
             <div id='logo' className='flex items-center'><h1 className='text-4xl mx-2 '>RBT Scheduler</h1> <img className='w-12 h-12 rotate-45' src='https://img.icons8.com/stickers/512/autism.png'></img></div>
             <div className='flex list-none  z-10' id='navLinks'>
 
