@@ -32,10 +32,31 @@ function TechList() {
         )
     })
 
+    const techRow = techs.map((x, key) => {
+        return (
+            <tr>
+                <td>{x.name}</td>
+                <td>Empty</td>
+                <td>Empty</td>
+            </tr>
+        )
+    })
+
     return (
-        <div className='flex flex-col w-1/4 text-center'><h2 className='text-2xl font-bold underline'>Techs</h2>
-            {mappedTechs}
-        </div>
+        <table
+            className='ml-10 table-auto'
+        >
+
+            <tr>
+                <th>Tech</th>
+                <th>Morning Patient</th>
+                <th>Afternoon Patient</th>
+            </tr>
+            {techRow}
+        </table >
+        // <div className='flex flex-col w-1/4 text-center'><h2 className='text-2xl font-bold underline'>Techs</h2>
+        //     {mappedTechs}
+        // </div>
     )
 }
 

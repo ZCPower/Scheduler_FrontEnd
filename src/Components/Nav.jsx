@@ -31,7 +31,7 @@ function Nav() {
 
                 <li onMouseLeave={handleTechDropLeave} className='text-xl z-10'>
                     <button className=
-                        'mx-6 bg-midpurple hover:bg-darkpurple' onClick={handleTechDropdown}
+                        'mx-6 bg-midpurple hover:bg-darkpurple' onMouseEnter={handleTechDropdown}
 
                     >Mangage Techs</button>
                     {techOpen ? (
@@ -43,7 +43,7 @@ function Nav() {
                 </li>
 
 
-                <li onMouseLeave={handleClientDropLeave} className='mr-5'><button className='bg-midpurple bg hover:bg-darkpurple' onClick={handleClientDropdown}>Manage Clients</button>
+                <li onMouseLeave={handleClientDropLeave} className='mr-5'><button className='bg-midpurple bg hover:bg-darkpurple' onMouseEnter={handleClientDropdown}>Manage Clients</button>
                     {clientOpen ? (
                         <ul className='absolute z-10'>
                             <li><Link to='addPatient'><button className='w-full bg-midpurple hover:bg-darkpurple'>Add Client</button></Link></li>
