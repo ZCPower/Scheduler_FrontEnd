@@ -20,7 +20,7 @@ function ClientList() {
         fetchClients()
     }, [])
 
-    //FIND WAY TO END INFINITE RE-RENDERING
+    //FIND WAY TO END INFINITE RE-RENDERING.
 
     const mappedClients = clients.map((x) => {
         return (
