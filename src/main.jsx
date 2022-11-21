@@ -12,11 +12,14 @@ import AddTech from './Components/AddTech';
 import AddPatient from './Components/AddPatient';
 import './index.css'
 import Schedule from './Components/Schedule';
+import ErrorPage from './Components/ErrorPage';
+import ModifyTechs from './Components/ModifyTechs';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: 'addTech',
@@ -29,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: 'schedule',
         element: <Schedule />
+      },
+      {
+        path: 'editTechs',
+        element: <ModifyTechs />
       }
     ]
   },

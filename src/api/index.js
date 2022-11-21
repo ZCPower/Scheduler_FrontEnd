@@ -90,3 +90,45 @@ export async function addPatient(name, needsRbt, tricare, trainOn, groupable) {
         console.log(error)
     }
 }
+
+export async function deleteTech(id) {
+    const url = `${baseUrl}/techs`
+
+    try {
+        const response = await fetch(url, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id
+            })
+        })
+
+        const data = response.json();
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export async function deletePatient(id) {
+    const url = `${baseUrl}/patients`
+
+    try {
+        const response = await fetch(url, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id
+            })
+        });
+
+        const data = response.json();
+        return data;
+    } catch (error) {
+        console.log(error)
+    }
+}
