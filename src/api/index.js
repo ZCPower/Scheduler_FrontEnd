@@ -114,7 +114,7 @@ export async function deleteTech(id) {
 
 export async function deletePatient(id) {
     const url = `${baseUrl}/patients`
-
+    console.log(id)
     try {
         const response = await fetch(url, {
             method: 'DELETE',
@@ -124,10 +124,10 @@ export async function deletePatient(id) {
             body: JSON.stringify({
                 id: id
             })
-        });
+        })
 
         const data = response.json();
-        return data;
+        return data
     } catch (error) {
         console.log(error)
     }

@@ -34,7 +34,7 @@ function ModifyTechs() {
     return (
         <div><h2 className='text-2xl font-bold text-center mb-5'>Modify Techs</h2>
             <div className='flex gap-x-2 justify-center'>
-                {techCards}
+                {techs.length > 0 ? { techCards } : 'No techs in the database!'}
             </div>
         </div>
     )

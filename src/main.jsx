@@ -14,6 +14,7 @@ import './index.css'
 import Schedule from './Components/Schedule';
 import ErrorPage from './Components/ErrorPage';
 import ModifyTechs from './Components/ModifyTechs';
+import ModifyPatients from './Components/ModifyPatients';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: 'editTechs',
         element: <ModifyTechs />
+      },
+      {
+        path: 'editPatients',
+        element: <ModifyPatients />
       }
     ]
   },

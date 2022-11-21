@@ -47,7 +47,7 @@ function Nav() {
                     {clientOpen ? (
                         <ul className='absolute z-10'>
                             <li><Link to='addPatient'><button className='w-full bg-midpurple hover:bg-darkpurple'>Add Client</button></Link></li>
-                            <li><button className='bg-midpurple hover:bg-darkpurple'>Edit/Remove Client</button></li>
+                            <li><Link to='editPatients'><button className='bg-midpurple hover:bg-darkpurple'>Edit/Remove Client</button></Link></li>
                         </ul>
                     ) : null}
 
